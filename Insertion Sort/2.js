@@ -13,7 +13,7 @@ function insertionSort(arr) {
     return arr;
 }
 
-let sorted = insertionSort([...ocenka]);
+let sorted = insertionSort(ocenka);
 let min = sorted[0];
 let max = sorted[sorted.length - 1];
 let median = sorted[Math.floor(sorted.length / 2)];
@@ -21,4 +21,5 @@ let median = sorted[Math.floor(sorted.length / 2)];
 console.log('Відсортовані оцінки:', sorted);
 console.log('Найнижча:', min);
 console.log('Найвища:', max);
+
 console.log('Медіана:', median);
