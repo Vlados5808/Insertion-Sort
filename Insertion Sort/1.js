@@ -7,23 +7,24 @@ let people = [
 
 function insertionSortByKey(arr, key, order = 'ask') {
     for (let i = 1; i < arr.length; i++) {
-        let current = arr[i];
+        let cur = arr[i];
         let j = i - 1;
         if (order === 'ask') {
-            while (j >= 0 && arr[j][key] > current[key]) {
+            while (j >= 0 && arr[j][key] > cur[key]) {
                 arr[j + 1] = arr[j];
                 j--;
             }
         } else if (order === 'desk') {
-            while (j >= 0 && arr[j][key] < current[key]) {
+            while (j >= 0 && arr[j][key] < cur[key]) {
                 arr[j + 1] = arr[j];
                 j--;
             }
         }
-        arr[j + 1] = current;
+        arr[j + 1] = cur;
         console.log(arr);
     }
     return arr;
 }
 console.log('За зростанням:', insertionSortByKey([...people], 'age', 'ask'));
+
 console.log('За спаданням:', insertionSortByKey([...people], 'age', 'desk'));
